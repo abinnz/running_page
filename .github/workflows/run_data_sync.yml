@@ -6,7 +6,7 @@ on:
     - cron: "0 0 * * *"
   push:
     branches:
-      - master
+      - keep
     paths:
       - scripts/nike_sync.py
       - scripts/runtastic_sync.py
@@ -18,9 +18,9 @@ on:
 
 env:
   RUN_TYPE: keep # support runtastic/strava/nike/garmin/garmin_cn/keep
-  ATHLETE: yihong0618
-  TITLE: Yihong0618 Running
-  TITLE_GRID: Over 10km Runs
+  ATHLETE: Abinnz
+  TITLE: Abinnz Running
+  TITLE_GRID: Over 300km Runs
 
 jobs:
   sync:
@@ -87,9 +87,9 @@ jobs:
       - name: Push new runs
         uses: github-actions-x/commit@v2.6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.ACCESS_TOKEN }}
           commit-message: "Add new runs"
-          files: activities src/static/ scripts/data.db assets/ GPX_OUT/
+          files: activities/ src/static/ scripts/data.db assets/ GPX_OUT/
           rebase: 'true'
-          name: yihong0618
-          email: zouzou0208@gmail.com
+          name: abinnz
+          email: aabingo1314@gmail.com
