@@ -20,7 +20,7 @@ env:
   RUN_TYPE: keep # support runtastic/strava/nike/garmin/garmin_cn/keep
   ATHLETE: Abinnz
   TITLE: Abinnz Running
-  TITLE_GRID: Over 300km Runs
+  TITLE_GRID: Over 1km Runs
 
 jobs:
   sync:
